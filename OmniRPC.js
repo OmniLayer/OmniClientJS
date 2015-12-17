@@ -1,7 +1,3 @@
-var user = 'foundation'
-var pass = 'maybeloveisthebiggestmanofall'
-
-
 var bitcoin = require('bitcoin');
 
 var user = '<your user here>'
