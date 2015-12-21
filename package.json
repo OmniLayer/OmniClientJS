@@ -1,0 +1,30 @@
+{
+  "name": "OmniTradeJS",
+  "version": "0.0.1",
+  "description": "Automated Omni DEX test trades",
+  "main": "OmniTests.js",
+  "dependencies": {
+    "starwars": "^1.0.0",
+    "bitcoin": "^3.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/msgilligan/OmniTradeJS.git"
+  },
+  "keywords": [
+    "omni",
+    "rpc",
+    "dex",
+    "trade"
+  ],
+  "author": "Patrick Dugan",
+  "license": "ASL2",
+  "bugs": {
+    "url": "https://github.com/msgilligan/OmniTradeJS/issues"
+  },
+  "homepage": "https://github.com/msgilligan/OmniTradeJS"
+}
