@@ -1,4 +1,4 @@
-var Omni = require('./Exchanges/OmniRPC.js').Omni
+var Omni = require('./lib/OmniRPC.js').Omni
 var fs = require('fs')
 var starWars = require('starwars')
 
