@@ -2,6 +2,14 @@ var Omni = require('./lib/OmniRPC.js').Omni
 var fs = require('fs')
 var starWars = require('starwars')
 
+var configurationFile = 'configuration.json';
+var configuration = JSON.parse(
+    fs.readFileSync(configurationFile)
+);
+
+// Save client in a variable, even though all calss are made through the Omni object
+var testClient = Omni.init(configuration.rpcuser, configuration.rpcpassword, null, true);
+
 var account
 
 var STP = {properties: [], books: [], pairs: [], trades: []}
@@ -25,6 +33,7 @@ var ids = []
 var nthTrade = 0
 
 var account = 0
+
 
 Omni.listaccounts(function(accounts){
     console.log(accounts)
