@@ -5,7 +5,8 @@
   "main": "OmniTests.js",
   "dependencies": {
     "starwars": "^1.0.0",
-    "bitcoin": "^3.0.1"
+    "bitcoin": "^3.0.1",
+    "bitcoin-promise": "^1.3.1"
   },
   "devDependencies": {},
   "scripts": {
