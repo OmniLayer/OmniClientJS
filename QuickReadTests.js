@@ -20,16 +20,16 @@ var omni = new OmniClient({host:'localhost',
 
 omni.listAccounts()
   .then(function(accounts) {
-    console.log("accounts %O:\n", accounts);
+    console.log("== accounts:\n", accounts);
     account = accounts[0];
     return omni.omniGetAllBalancesForAddress(address);
   })
   .then(function(balances) {
-    console.log("balances for %s %O:\n", address, balances);
+    console.log("== balances for %s:\n", address, balances);
     for (var i=2; i<balances.length; i++)  {
       ids.push(balances[i]['propertyid'])
     }
-    console.log("ids %O:\n", ids);
+    console.log("== ids:\n", ids);
   })
   .catch( function(err){
     console.log( err ) ;
