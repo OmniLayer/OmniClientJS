@@ -11,7 +11,7 @@ var configuration = JSON.parse(
 //var balances = [];
 var address = "n4Po8andi3akpQBxzBWXbQBttF9LueXqyo";
 var ids = [];
-var account = 0;
+var account;
 
 var omni = new OmniClient({host:'localhost',
                           port:18332,
