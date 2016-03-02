@@ -1,6 +1,6 @@
 'use strict';
 
-var OmniClient = require('./lib/OmniRPC.js').OmniClient;
+var OmniClient = require('./lib/OmniClient.js').OmniClient;
 var fs = require('fs');
 
 var configurationFile = 'configuration.json';
@@ -13,16 +13,16 @@ var address = "n4Po8andi3akpQBxzBWXbQBttF9LueXqyo";
 var ids = [];
 var account;
 
-var omni = new OmniClient({host:'localhost',
+var client = new OmniClient({host:'localhost',
                           port:18332,
                           user: configuration.rpcuser,
                           pass: configuration.rpcpassword});
 
-omni.listAccounts()
+client.listAccounts()
   .then(function(accounts) {
     console.log("== accounts:\n", accounts);
     account = accounts[0];
-    return omni.omniGetAllBalancesForAddress(address);
+    return client.omniGetAllBalancesForAddress(address);
   })
   .then(function(balances) {
     console.log("== balances for %s:\n", address, balances);
