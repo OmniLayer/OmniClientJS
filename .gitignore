@@ -2,3 +2,5 @@ node_modules
 .idea
 *.iml
 configuration.json
+build/
+

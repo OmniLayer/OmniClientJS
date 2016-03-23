@@ -19,18 +19,18 @@ var client = new OmniClient({host:'localhost',
                           pass: configuration.rpcpassword});
 
 client.listAccounts()
-  .then(function(accounts) {
+  .then( accounts => {
     console.log("== accounts:\n", accounts);
     account = accounts[0];
     return client.omniGetAllBalancesForAddress(address);
   })
-  .then(function(balances) {
+  .then( balances => {
     console.log("== balances for %s:\n", address, balances);
     for (var i=2; i<balances.length; i++)  {
       ids.push(balances[i]['propertyid'])
     }
     console.log("== ids:\n", ids);
   })
-  .catch( function(err){
+  .catch( err => {
     console.log( err ) ;
   });

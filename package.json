@@ -1,8 +1,8 @@
 {
-  "name": "OmniTradeJS",
+  "name": "OmniClientJS",
   "version": "0.0.1",
-  "description": "Automated Omni DEX test trades",
-  "main": "OmniTests.js",
+  "description": "EcmaScript 2015 client for Omni Core JSON-RPC",
+  "main": "OmniClient.js",
   "dependencies": {
     "starwars": "^1.0.0",
     "bitcoin": "^3.0.1",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/msgilligan/OmniTradeJS.git"
+    "url": "https://github.com/OmniLayer/OmniClientJS.git"
   },
   "keywords": [
     "omni",
@@ -23,9 +23,13 @@
     "trade"
   ],
   "author": "Patrick Dugan",
+  "contributors": [{
+    "name": "Sean Gilligan",
+    "email": "sean@msgilligan.com"
+   }],
   "license": "ASL2",
   "bugs": {
-    "url": "https://github.com/msgilligan/OmniTradeJS/issues"
+    "url": "https://github.com/OmniLayer/OmniClientJS/issues"
   },
-  "homepage": "https://github.com/msgilligan/OmniTradeJS"
+  "homepage": "https://github.com/OmniLayer/OmniClientJS"
 }
