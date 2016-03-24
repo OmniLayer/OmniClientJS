@@ -8,8 +8,7 @@ var configuration = JSON.parse(
     fs.readFileSync(configurationFile)
 );
 
-//var balances = [];
-var address = "n4Po8andi3akpQBxzBWXbQBttF9LueXqyo";
+var address = OmniClient.testNet.exodusAddress;
 var ids = [];
 var account;
 
@@ -18,15 +17,22 @@ var client = new OmniClient({host:'localhost',
                           user: configuration.rpcuser,
                           pass: configuration.rpcpassword});
 
-client.listAccounts()
+
+client.getBlockchainInfo()
+  .then( () => {
+    console.log("about to list accounts");
+    return client.listAccounts();
+  })
   .then( accounts => {
     console.log("== accounts:\n", accounts);
-    account = accounts[0];
+    account = accounts['']; // Default account
+    console.log("== account %j",account);
+    console.log("== address: %s", address);
     return client.omniGetAllBalancesForAddress(address);
   })
   .then( balances => {
-    console.log("== balances for %s:\n", address, balances);
-    for (var i=2; i<balances.length; i++)  {
+    console.log("== balances for %s: %j\n", address, balances);
+    for (var i=0; i<balances.length; i++)  {
       ids.push(balances[i]['propertyid'])
     }
     console.log("== ids:\n", ids);
