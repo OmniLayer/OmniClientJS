@@ -25,7 +25,10 @@ There are a few `bitcoin.conf` settings that are necessary to run these tests.
     rpcuser=test-username-goes-here
     rpcpassword=test-password-goes-here
 
+If you are not familiar with `bitcoin.conf` or **Omni Core**'s usage of it, please reference:
 
+* https://en.bitcoin.it/wiki/Running_Bitcoin
+* https://github.com/OmniLayer/omnicore/blob/master/src/omnicore/doc/configuration.md
 
 ## Configure your client
 
