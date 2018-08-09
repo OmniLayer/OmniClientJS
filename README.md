@@ -1,4 +1,4 @@
-# OmniClientJS
+# OmniClientJS (Currently unmaintained)
 
 Omni Layer Node.js RPC client
 
